@@ -1,0 +1,17 @@
+[Unit]
+Description=Flask API for IoT Control
+After=network.target
+
+[Service]
+User=ec2-user
+WorkingDirectory=/home/ec2-user/flask-app
+Environment="PATH=/home/ec2-user/flask-app/venv/bin"
+Environment="AWS_REGION="
+Environment="SENSOR_TABLE="
+Environment="USER_INPUT_TABLE="
+Environment="TOPIC_AC_CONTROL=api/control/ac"
+Environment="TOPIC_LIGHTS_CONTROL=api/control/lights"
+ExecStart=/home/ec2-user/flask-app/venv/bin/gunicorn --workers 3 --bind 0.0.0.0:8080 wsgi:app
+
+[Install]
+WantedBy=multi-user.target
