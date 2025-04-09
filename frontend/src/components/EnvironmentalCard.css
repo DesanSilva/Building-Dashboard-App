@@ -1,0 +1,92 @@
+.environmental-card {
+    flex: 1;
+    border: 1px solid #2d2d2d;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    background-color: #1e1e1e;
+    margin-bottom: 0.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.environmental-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -1px rgba(0, 0, 0, 0.4), 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.environmental-card.temperature-card {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.98));
+    border-left: 4px solid #ff4f00;
+}
+
+.environmental-card.humidity-card {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.98));
+    border-left: 4px solid #3b82f6;
+}
+
+.environmental-card.luminance-card {
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.95), rgba(25, 25, 25, 0.98));
+    border-left: 4px solid #fbf62b;
+}
+
+.environmental-card.last-updated-card {
+    height: 1.5rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-left: 4px solid #10b981;
+}
+
+.environmental-card-header {
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 0.5rem;
+}
+
+.environmental-card.last-updated-card .environmental-card-header {
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.environmental-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e0e0e0;
+    text-align: center;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+.environmental-card.last-updated-card .environmental-card-title {
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.environmental-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.environmental-card.last-updated-card .environmental-card-content {
+    justify-content: flex-start;
+}
+
+.environmental-card-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+
+.environmental-card.last-updated-card .environmental-card-value {
+    font-size: 1rem;
+    color: #d1d5db;
+}
